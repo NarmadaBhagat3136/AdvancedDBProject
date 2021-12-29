@@ -1,0 +1,11 @@
+// Test 5
+// T1 fails again here because it wrote to a site that failed. T2 ok.
+begin(T1)
+W(T1,x1,20)
+End(T1)
+Fail(2)
+recover(2)
+begin(T2)
+R(T2,x1)
+end(T2)
+dump()
